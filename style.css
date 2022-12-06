@@ -102,8 +102,6 @@ img {
 .btnPrimary{
     background-color: var(--color-primary);
     color: var(--color-white);
-    border-radius: 50em;
-    margin-bottom: 5rem;
 }
 
 .btnPrimary:hover{
@@ -113,9 +111,6 @@ img {
 .btnSecondary{
     background-color: var(--color-primary);
     color: var(--color-white);
-    border-radius: 50em;
-    margin-bottom: 5rem;
-    margin-bottom: 5rem;
 }
 
 .btnSecondary:hover{
@@ -125,13 +120,29 @@ img {
 .btnTertiary{
     background-color: var(--color-white);
     color: var(--color-black);
-    border-radius: 50em;
-    margin-bottom: 5rem;
 }
 
 .btnTertiary:hover{
     background-color: var(--color-primaryLight);
 }
+
+
+.btnDownload {
+    border-color: var(--color-primary);
+    border-style: solid;
+    border-width: 2px;
+    background-color: transparent;
+    color: var(--color-primary);
+    padding: 0.625rem 1.5rem;
+    border-radius: 50em;
+    transition: var(--transition);
+}
+
+.btnDownload:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
 
 
 /* ================================ NAVBAR ==============================*/
@@ -177,7 +188,7 @@ nav button {
     transition: var(--transition);
 }
 
-.navMenu li :hover {
+.navMenu li a:hover {
     color: var(--color-primary);
 }
 
@@ -185,25 +196,6 @@ nav button {
     height: 2rem;
 }
 
-
-.btnDownload {
-    border-color: var(--color-primary);
-    border-style: solid;
-    border-width: 2px;
-    background-color: transparent;
-    color: var(--color-primary);
-    padding: 1rem 2rem;
-    border-radius: 50em;
-    transition: var(--transition);
-}
-
-.btnDownload:hover {
-    background-color: var(--color-primary);
-}
-
-.btnDownload a:hover {
-    color: var(--color-white);
-}
 
 
 /* ====================== Hero Section =======================*/
@@ -284,13 +276,17 @@ nav button {
     gap: 0.5rem;
 }
 
+.projectList a:hover {
+    color: var(--color-primaryLight);
+}
+
 .projectsTop {
     text-align: center;
     padding: 0 5rem 5rem;
 }
 
-.projectsTop h3 {
-    margin-bottom: 1.5rem;
+.projectsTop h3, h2 {
+    margin-bottom: 0.5rem;
 }
 
 .projectsBottom {
@@ -304,6 +300,7 @@ nav button {
     align-items: center;
     width: 100%;
     height: 37rem;
+    max-height: 37em;
     padding: 3rem 3rem;
     background-color: #00bf8e;
     margin-bottom: 2rem;
@@ -437,6 +434,38 @@ nav button {
     }
 
 
+    .btnDownload {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        border-radius: 0;
+        transition: var(--transition);
+        width: 100%;
+        height: 5.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+}
+
+
+
+ /* ==================== Projects====================*/
+
+
+.projectsBottom {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+}
+
+.imageWrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 35rem;
+    padding: 3rem 3rem;
 }
 
 
@@ -448,21 +477,54 @@ nav button {
 @media screen and (max-width: 768px) {
 
 
-    /* ==================== social media ads ====================*/
-
-    .socialMedia {
-        text-align: center;
+    /* ==================== NavBar ====================*/
+    .btnDownload {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        border-radius: 0;
+        transition: var(--transition);
+        width: 100%;
+        height: 5.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .socialMediaCategories {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    /* ==================== Skills ====================*/
+
+    .skills {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
-     /* ==================== web design ====================*/
+    .skillsTop {
+        width: 100%;
+    }
+    
+    .skillsBottom {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5rem;
+    }
+    
+    .skillList {
+        border-top: 1.5px solid var(--color-black);
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 
-     .webDesign {
-        text-align: center;
+     /* ==================== Projects ====================*/
+
+     .projectsBottom {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5rem;
+    }
+    
+    .imageWrap {
+        width: 100%;
+        height: 30rem;
     }
 
 }
