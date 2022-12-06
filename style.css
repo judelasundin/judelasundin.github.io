@@ -17,9 +17,9 @@
     --color-dangerVariant: rgba(247, 88, 66, 0.4);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.7);
-    --color-black: #333333;
-    --color-bg: #F5F7FE;
-    --color-bg1: #308f64;
+    --color-black: #272A33;
+    --color-bg: #30B8E2;
+    --color-bg1: #FEFCF4;
     --color-bg2: #e1effd;
 
     --container-width-lg: 80%;
@@ -44,11 +44,6 @@ body {
 
 section {
     padding: 6rem 0;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 4rem;
 }
 
 h1, h2, h3, h4, h5 {
@@ -92,7 +87,7 @@ img {
     padding: 1rem 2rem;
     border: 1px solid transparent;
     font-weight: 500;
-    border-radius: 0.5em;
+    border-radius: 50em;
     margin-top: 2rem;
     margin-bottom: 2rem;
     transition: var(--transition);
@@ -107,7 +102,7 @@ img {
 .btnPrimary{
     background-color: var(--color-primary);
     color: var(--color-white);
-    border-radius: 0.5em;
+    border-radius: 50em;
     margin-bottom: 5rem;
 }
 
@@ -115,12 +110,36 @@ img {
     background-color: var(--color-primaryLight);
 }
 
+.btnSecondary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50em;
+    margin-bottom: 5rem;
+    margin-bottom: 5rem;
+}
+
+.btnSecondary:hover{
+    background-color: var(--color-primaryLight);
+}
+
+.btnTertiary{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 50em;
+    margin-bottom: 5rem;
+}
+
+.btnTertiary:hover{
+    background-color: var(--color-primaryLight);
+}
+
+
 /* ================================ NAVBAR ==============================*/
 
 nav {
-    background: transparent;
+    background-color: var(--color-white);
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     position: fixed;
     top: 0;
     z-index: 11;
@@ -139,6 +158,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 nav button {
@@ -156,14 +177,43 @@ nav button {
     transition: var(--transition);
 }
 
-.navMenu a:hover {
+.navMenu li :hover {
     color: var(--color-primary);
 }
 
-/* ====================== HEADER =======================*/
+.navContainer img{
+    height: 2rem;
+}
+
+
+.btnDownload {
+    border-color: var(--color-primary);
+    border-style: solid;
+    border-width: 2px;
+    background-color: transparent;
+    color: var(--color-primary);
+    padding: 1rem 2rem;
+    border-radius: 50em;
+    transition: var(--transition);
+}
+
+.btnDownload:hover {
+    background-color: var(--color-primary);
+}
+
+.btnDownload a:hover {
+    color: var(--color-white);
+}
+
+
+/* ====================== Hero Section =======================*/
 
 .heroSection {
     background-color: var(--color-bg);
+}
+
+.heroSection h1, p{
+    color: var(--color-white);
 }
 
 .heroContainer {
@@ -174,65 +224,108 @@ nav button {
 }
 
 .heroContainer p {
-    margin: 0 0 2rem;
+    margin: 2rem 0 2rem;
 }
 
-/* ====================== Social Media Ads =======================*/
+/* ====================== Skills Section =======================*/
 
-.socialMedia {
-    background-color: var(--color-primary);
-}
-
-.socialMedTitle h1 {
-    color: var(--color-white);
-}
-
-.socialMedTitle p {
-    color: var(--color-white);
-    margin-bottom: 5rem;
-}
-
-.socialMediaCategories {
-    display: grid;
-    grid-template-columns:repeat(3,1fr);
-    gap: 3rem;
-}
-
-.socialMediaCategories img{
-    border-radius: 0.5rem;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-}
-
-.socialMediaCategories img:hover{
-    transform: scale(1.1);
-    opacity: 0.5;
-    transition: var(--transition);
-}
-.btnCenter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ====================== Web Design =======================*/
-
-.webDesign {
+.skills {
     background-color: var(--color-bg1);
 }
 
-.webDesignContainer h1 {
-    color: var(--color-white);
+.skills p {
+    color: var(--color-black);
 }
 
-.webDesignContainer p {
-    color: var(--color-white);
-    margin-bottom: 5rem;
+.skills h3 {
+    margin-bottom: 6rem;
+    line-height: 2.5rem;
 }
 
-.webDesignContainer img{
-    border-radius: 0.2rem;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+.skills h4 {
+    margin-bottom: 1rem;
+    color:#757575;
 }
+.skills h2{
+    margin-bottom: 2rem;
+}
+.skillsTop {
+    width: 70%;
+}
+
+.skillsBottom {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5rem;
+}
+
+.skillList {
+    border-top: 1.5px solid var(--color-black);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* ====================== Projects Section =======================*/
+
+.projects {
+    background-color: var(--color-white);
+}
+
+.projects p {
+    color: var(--color-black);
+    margin: 1rem 0;
+}
+
+.projectList a {
+    display: flex;
+    margin-top: 2rem;
+    color: var(--color-primary);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.projectsTop {
+    text-align: center;
+    padding: 0 5rem 5rem;
+}
+
+.projectsTop h3 {
+    margin-bottom: 1.5rem;
+}
+
+.projectsBottom {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10rem;
+}
+
+.imageWrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 37rem;
+    padding: 3rem 3rem;
+    background-color: #00bf8e;
+    margin-bottom: 2rem;
+}
+
+.wrapPurple {
+    background-color: #6B62CA;
+}
+
+.wrapOrange {
+    background-color: #F99F6C;
+}
+
+.wrapBlue {
+    background-color: #157AC3;
+}
+
+.wrapPeach{
+    background-color: #F59985;
+}
+
+
 
 /* ====================== Footer =======================*/
 
@@ -345,6 +438,10 @@ nav button {
 
 
 }
+
+
+
+
 
 /* ==================== MEDIA QUERIES (mobile) ====================*/
 
