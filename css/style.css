@@ -326,25 +326,54 @@ nav button {
     background-color: #F59985;
 }
 
+/* ====================== Footer =======================*/
+
+.otherProjects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    height: 35rem;
+}
+
+.otherProj a {
+    display: flex;
+    margin-top: 2rem;
+    color: var(--color-white);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.otherProj a:hover {
+    color: var(--color-primaryLight);
+}
+
+.otherProj {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+}
+
 
 
 /* ====================== Footer =======================*/
 
 
 .footer  {
-    background-color: var(--color-black);
+    background-color: var(--color-white);
     padding-top: 5rem;
     width: 100%;
     height: 100%;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .permalinks a{
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .permalinks a:hover{
-    color: var(--color-light);
+    color: var(--color-primaryLight);
 }
 
 .permalinks li {
@@ -357,7 +386,7 @@ nav button {
 }
 
 .footerLogo h4{
-    color: var(--color-white);
+    color: var(--color-black);
     margin-bottom: 4rem;
 }
 
@@ -367,6 +396,7 @@ nav button {
 
 .footer-2 p {
     font-weight: 300;
+    color: var(--color-black);
 }
 
 /* ==================== MEDIA QUERIES (TABLETS) ====================*/
